@@ -7,7 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>Password Generator</h1>
+    <div class="container">
+        <div class="pw-header">
+            <div class="pw" id="pw">akjshh091883</div>
+            <button class="copy" id="copy">copy</button>
+        </div>
+        <div class="pw-body">
+            <div class="form-control">
+                <label for="len">Password Length</label>
+                <input type="number" id="len" min="2" max="20">
+            </div>
+            <div class="form-control">
+                <label for="upper">Contain Upper</label>
+                <input type="checkbox" id="upper">
+            </div>
+            <div class="form-control">
+                <label for="lower">Contain Lower</label>
+                <input type="checkbox" id="lower">
+            </div>
+            <div class="form-control">
+                <label for="numbers">Contain Numbers</label>
+                <input type="checkbox" id="numbers">
+            </div>
+            <div class="form-control">
+                <label for="symbol">Contain Symbol</label>
+                <input type="checkbox" id="symbol">
+            </div>
+            <div class="form-control">
+                <button id="generate" class="generate">Generate Password</button>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

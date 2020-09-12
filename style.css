@@ -2,9 +2,68 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-items: center;
     align-items: center;
     background: rgb(174, 93, 255);
+}
+
+.container, .pw-header, .pw-body, .form-control {
+    display: flex;
+}
+
+.container {
+    min-width: 60%;
+    background: rgb(68, 13, 122);
+    flex-direction: column;
+    padding: 1.5rem;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.pw {
+    background: rgb(184, 112, 255);
+    width: 100%;
+    border: 1px solid black;
+    padding: 0.5rem;
+    color: #111;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.copy {
+    font-family: inherit;
+    background: rgb(255, 255, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.pw-body {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.form-control {
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.generate {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 3px;
+    background: rgb(255, 255, 0);
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
