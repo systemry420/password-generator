@@ -18,9 +18,42 @@ function getUpper () {
 function getLower () {
     return lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
 }
-function getNumbers () {
+function getNumber () {
     return numbers[Math.floor(Math.random() * numbers.length)];
 }
-function getSymbols () {
+function getSymbol () {
     return symbols[Math.floor(Math.random() * symbols.length)];
+}
+
+
+generateEL.addEventListener('click', generatePassword);
+
+function generatePassword(){
+    let len = lenEL.value;
+    let password = '';
+
+    for(let i=0; i<len; i++){
+        password += getChar();
+    }
+
+    pwEL.innerText = password;
+    password = '';
+}
+
+function getChar (){
+    const arr = [];
+    if(upperEL.checked)
+        arr.push(getUpper());
+    if(lowerEL.checked)
+        arr.push(getLower());
+    if(numbersEL.checked)
+        arr.push(getNumber());
+    if(symbolEL.checked)
+        arr.push(getSymbol());
+
+    // get random character from 4-length array
+    if(arr.length > 0)
+        return arr[Math.floor(Math.random() * arr.length)];
+    else
+        return '';
 }
